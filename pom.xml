@@ -4,12 +4,16 @@
   <groupId>com.gradle</groupId>
   <artifactId>maven-build-scan-extension-sample</artifactId>
   <packaging>jar</packaging>
-  <version>1.0</version>
+  <version>1.0-SNAPSHOT</version>
 
   <properties>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
   </properties>
+
+  <scm>
+    <connection>scm:git:https://github.com/guylabs/maven-build-scan-quickstart.git</connection>
+  </scm>
 
   <dependencies>
     <dependency>
@@ -30,6 +34,11 @@
       <plugin>
         <artifactId>maven-surefire-plugin</artifactId>
         <version>2.22.2</version>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-release-plugin</artifactId>
+        <version>3.0.0-M4</version>
       </plugin>
     </plugins>
   </build>
